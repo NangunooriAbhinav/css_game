@@ -1,25 +1,16 @@
-import Image from "next/image";
+import View from "@/app/components/view";
+import CodeInput from "./components/codeinput";
+import { useState } from "react";
 
 export default function Home() {
+  const cssClass = ["mode1", "mode2", "mode3", "mode4", "mode5"];
+
   return (
     <>
       <section className="main d-flex justify-content-center align-items-center">
-        <div className="game-container d-grid no-gutters">
-          <div className="row">
-            <div className="col-md-4 box-1 p-0"></div>
-            <div className="col-md-4 box-2 p-0"></div>
-            <div className="col-md-4 box-3 p-0"></div>
-          </div>
-          <div className="row">
-            <div className="col-md-4 box-4 p-0"></div>
-            <div className="col-md-4 box-5 p-0"></div>
-            <div className="col-md-4 box-6 p-0"></div>
-          </div>
-          <div className="row">
-            <div className="col-md-4 box-7 p-0"></div>
-            <div className="col-md-4 box-8 p-0"></div>
-            <div className="col-md-4 box-9 p-0"></div>
-          </div>
+        <div className="game-container d-flex">
+          <View cssDetails={cssClass[0]} />
+          <CodeInput />
         </div>
       </section>
     </>

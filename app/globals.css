@@ -8,8 +8,8 @@ body {
 }
 
 .game-container {
-  width: 525px;
-  height: 525px;
+  width: 80vw;
+  height: 80vh;
 }
 
 .row {
