@@ -2,11 +2,12 @@
 import View from "@/app/components/view";
 import CodeInput from "./components/codeinput";
 import { useState } from "react";
+import css from "styled-jsx/css";
 
 export default function Home() {
   const [cssMode, setCssMode] = useState(1);
   const [isCorrect, setIsCorrect] = useState(false);
-  const [progress, setProgress] = useState(0);
+  const [progress, setProgress] = useState(1);
   const [wrongSubmit, setWrongSubmit] = useState(false);
 
   const answers = [
@@ -31,9 +32,8 @@ export default function Home() {
   };
 
   const handleModeChange = () => {
-    if (cssMode < progress + 1) {
+    if (cssMode < progress) {
       setCssMode((prev) => (prev === 10 ? 1 : prev + 1));
-      setProgress(cssMode + 1);
     } else {
       setWrongSubmit(true);
     }
@@ -46,10 +46,14 @@ export default function Home() {
     if (normalizedInput === normalizedAnswer) {
       console.log("Correct!");
       setIsCorrect(true);
-      setProgress((prev) => (prev === 9 ? 0 : prev + 1));
+      if (cssMode === progress) {
+        setProgress((prev) => (prev === 10 ? 1 : prev + 1));
+      }
+      console.log(progress, cssMode);
     } else {
       console.log("Incorrect!");
       setWrongSubmit(true);
+      console.log(progress, cssMode);
     }
     console.log(input);
   };
