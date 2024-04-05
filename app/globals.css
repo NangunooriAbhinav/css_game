@@ -30,12 +30,12 @@ body {
 
 .mode-2 {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 
 .mode-3 {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr;
 }
 
 .mode-4 {
