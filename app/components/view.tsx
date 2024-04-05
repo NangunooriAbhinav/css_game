@@ -1,21 +1,13 @@
-export default function View({ cssDetails }: { cssDetails: string }) {
+export default function View({ cssDetails }: { cssDetails: number }) {
   return (
-    <div className={`d-grid h-100 w-50 ${cssDetails}`}>
-      <div className="row">
-        <div className="col-md-4 box-1 p-0"></div>
-        <div className="col-md-4 box-2 p-0"></div>
-        <div className="col-md-4 box-3 p-0"></div>
-      </div>
-      <div className="row">
-        <div className="col-md-4 box-4 p-0"></div>
-        <div className="col-md-4 box-5 p-0"></div>
-        <div className="col-md-4 box-6 p-0"></div>
-      </div>
-      <div className="row">
-        <div className="col-md-4 box-7 p-0"></div>
-        <div className="col-md-4 box-8 p-0"></div>
-        <div className="col-md-4 box-9 p-0"></div>
-      </div>
+    <div className={`h-100 w-50 mode-${cssDetails}`}>
+      <div
+        className={`${cssDetails <= 5 ? "col" : "box"}  p-0 bg-primary`}
+      ></div>
+      <div className={`${cssDetails <= 5 ? "col" : "box"}  p-0 bg-info`}></div>
+      <div
+        className={`${cssDetails <= 5 ? "col" : "box"}  p-0 bg-secondary`}
+      ></div>
     </div>
   );
 }

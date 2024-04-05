@@ -15,3 +15,64 @@ body {
 .row {
   --bs-gutter-x: 0 !important;
 }
+
+.mode-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.mode-2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.mode-3 {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.mode-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.mode-5 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-rows: 1fr 2fr;
+}
+
+.mode-6 {
+  display: flex;
+  justify-content: center;
+}
+
+.mode-7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mode-8 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mode-9 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mode-10 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.box {
+  width: 30%;
+  height: 30%;
+}
