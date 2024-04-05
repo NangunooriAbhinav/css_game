@@ -13,7 +13,7 @@ export default function Home() {
     "grid-template-columns: 1fr 1fr 1fr;",
     "grid-template-columns: 1fr 2fr 1fr;",
     "grid-template-columns: 1fr 2fr;",
-    "grid-template-columns: 1fr 1fr 1fr;grid-template-rows: 1fr 2fr;",
+    "grid-template-columns: 1fr 1fr 1fr;grid-template-rows: 1fr 1fr;",
     "grid-template-columns: 1fr 2fr;grid-auto-rows: 1fr 2fr;",
     "justify-content: center;",
     "justify-content: center;align-items: center;",
@@ -22,17 +22,28 @@ export default function Home() {
     "justify-content: center;align-items: flex-end;",
   ];
 
+  const normalizeCSS = (cssString: string) => {
+    const trimmedString = cssString.replace(/\s+/g, "");
+
+    const sortedString = trimmedString.split(";").sort().join(";");
+
+    return sortedString;
+  };
+
   const handleModeChange = () => {
-    if (progress === cssMode) {
+    if (cssMode < progress + 1) {
       setCssMode((prev) => (prev === 10 ? 1 : prev + 1));
+      setProgress(cssMode + 1);
     } else {
       setWrongSubmit(true);
     }
   };
 
   const handleSubmit = (input: string) => {
-    input = input.replace(/\n/g, "");
-    if (input === answers[cssMode - 1]) {
+    const normalizedInput = normalizeCSS(input);
+    const normalizedAnswer = normalizeCSS(answers[cssMode - 1]);
+
+    if (normalizedInput === normalizedAnswer) {
       console.log("Correct!");
       setIsCorrect(true);
       setProgress((prev) => (prev === 9 ? 0 : prev + 1));
