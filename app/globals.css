@@ -5,11 +5,18 @@ body {
 .main {
   width: 100vw;
   height: 100vh;
+  background-image: url("/bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .game-container {
   width: 80vw;
   height: 80vh;
+  background-color: #40a2e3;
+  border: 0px solid #000;
+  border-radius: 15px;
 }
 
 .row {
@@ -83,7 +90,7 @@ body {
   padding: 10px;
   font-size: 14px;
   line-height: 1.5;
-  border: 1px solid #ccc;
+  border: 0px solid #ccc;
   border-radius: 4px;
   resize: vertical;
   color: white;
@@ -93,4 +100,30 @@ body {
 .leetcode-input {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 14px;
+}
+
+.view {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 13px;
+  background-color: #fff;
+}
+
+.switch {
+  background-color: #fff !important;
+}
+
+.bg-box-1 {
+  background-color: #3d84ee;
+}
+
+.bg-box-3 {
+  background-color: #5356ff;
+}
+
+.bg-box-2 {
+  background-color: #98abee;
+}
+
+.submit-btn {
+  background-color: #fff !important;
 }

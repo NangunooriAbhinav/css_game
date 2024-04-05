@@ -13,10 +13,10 @@ export default function Home() {
   return (
     <>
       <section className="main d-flex justify-content-center align-items-center">
-        <div className="game-container d-flex p-2 border">
+        <div className="game-container d-flex p-3 ">
           <View cssDetails={cssMode} />
           <CodeInput />
-          <button onClick={handleModeChange} className="btn ">
+          <button onClick={handleModeChange} className="btn border switch">
             {">"}
           </button>
         </div>
