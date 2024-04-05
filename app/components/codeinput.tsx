@@ -15,9 +15,9 @@ export default function CodeInput() {
 
   return (
     <div className="container w-50">
-      <h2>Enter Your CSS Code</h2>
+      <h5 className="my-2">Enter Your CSS Code</h5>
       <textarea
-        className="code-input"
+        className="code-input leetcode-input"
         placeholder="Enter your CSS code here..."
         value={cssCode}
         onChange={handleInputChange}

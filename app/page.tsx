@@ -13,11 +13,11 @@ export default function Home() {
   return (
     <>
       <section className="main d-flex justify-content-center align-items-center">
-        <div className="game-container d-flex">
+        <div className="game-container d-flex p-2 border">
           <View cssDetails={cssMode} />
           <CodeInput />
-          <button onClick={handleModeChange} className="btn btn-primary">
-            Change Mode
+          <button onClick={handleModeChange} className="btn ">
+            {">"}
           </button>
         </div>
       </section>
