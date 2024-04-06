@@ -34,10 +34,8 @@ export default function CodeInput({
           overflow: "auto",
         }}
       >
-        {/* Permanent text */}
         <pre className="m-0">element.class{"{"}</pre>
         <pre>display:{mode <= 5 ? "grid" : "flex"}</pre>
-        {/* Editable text */}
         <textarea
           style={{
             width: "100%",
