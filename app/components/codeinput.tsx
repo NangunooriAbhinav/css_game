@@ -29,7 +29,7 @@ export default function CodeInput({
           border: "1px solid #ced4da",
           padding: "10px",
           borderRadius: "4px",
-          backgroundColor: "#000",
+          backgroundColor: "#fff",
           color: "#495057",
           overflow: "auto",
         }}
@@ -43,7 +43,7 @@ export default function CodeInput({
             outline: "none",
             resize: "none",
             background: "transparent",
-            color: "#fff",
+            color: "#000",
           }}
           placeholder="Enter your CSS code here..."
           value={cssCode}
